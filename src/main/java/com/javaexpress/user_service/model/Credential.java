@@ -1,6 +1,4 @@
 package com.javaexpress.user_service.model;
-
-import com.javaexpress.user_service.RoleBasedAuthority;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -15,7 +13,6 @@ public class Credential {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(unique = true, nullable = false)
     private Integer credentialId;
 
     @Column(unique = true)
@@ -25,6 +22,7 @@ public class Credential {
     @Enumerated(EnumType.STRING)
     @Column(name ="role")
     private RoleBasedAuthority roleBasedAuthority;
+
 
     private Boolean isEnabled;
     private Boolean isAccountNonExpired;
