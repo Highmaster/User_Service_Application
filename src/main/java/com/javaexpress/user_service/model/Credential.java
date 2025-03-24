@@ -23,7 +23,6 @@ public class Credential {
     @Column(name ="role")
     private RoleBasedAuthority roleBasedAuthority;
 
-
     private Boolean isEnabled;
     private Boolean isAccountNonExpired;
     private Boolean isAccountNonLocked;
