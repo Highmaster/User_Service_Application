@@ -1,6 +1,6 @@
-package com.javaexpress.user_service.repository;
+package com.javaexpress.repository;
 
-import com.javaexpress.user_service.model.User;
+import com.javaexpress.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
