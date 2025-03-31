@@ -1,4 +1,4 @@
-package com.javaexpress.user_service.model;
+package com.javaexpress.model;
 
 import jakarta.persistence.*;
 import lombok.*;

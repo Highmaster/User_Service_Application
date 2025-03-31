@@ -1,6 +1,6 @@
-package com.javaexpress.user_service.service;
+package com.javaexpress.service;
 
-import com.javaexpress.user_service.dto.UserDto;
+import com.javaexpress.dto.UserDto;
 
 import java.util.List;
 

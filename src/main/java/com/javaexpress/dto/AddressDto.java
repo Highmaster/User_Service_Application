@@ -1,4 +1,6 @@
-package com.javaexpress.user_service.dto;
+package com.javaexpress.dto;
 
 public class AddressDto {
+
+
 }

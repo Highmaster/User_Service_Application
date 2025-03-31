@@ -1,18 +1,17 @@
-package com.javaexpress.user_service.model;
+package com.javaexpress.model;
+
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
+@Getter
+@RequiredArgsConstructor
 
 public enum RoleBasedAuthority {
-    ADMIN("ROLE_ADMIN"),
-    USER("ROLE_USER");
+
+    ROLE_USER("USER"),
+    ROLE_ADMIN("ADMIN");
 
     private final String role;
 
-    // Constructor to accept the role string
-    RoleBasedAuthority(String role) {
-        this.role = role;
-    }
 
-    // Getter to retrieve the role
-    public String getRole() {
-        return role;
-    }
 }

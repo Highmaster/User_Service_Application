@@ -1,6 +1,6 @@
-package com.javaexpress.user_service.repository;
+package com.javaexpress.repository;
 
-import com.javaexpress.user_service.model.Credential;
+import com.javaexpress.model.Credential;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CredentialRepository  extends JpaRepository<Credential, Integer>   {

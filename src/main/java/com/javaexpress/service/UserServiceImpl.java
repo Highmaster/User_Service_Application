@@ -1,28 +1,43 @@
-package com.javaexpress.user_service.service;
+package com.javaexpress.service;
 
-import com.javaexpress.user_service.dto.UserDto;
-import com.javaexpress.user_service.repository.UserRepository;
+import com.javaexpress.dto.UserDto;
+import com.javaexpress.helper.UserMappingHelper;
+import com.javaexpress.model.User;
+import com.javaexpress.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class UserServiceImpl implements UserService{
+
+    @Autowired
     private UserRepository userRepository;
 
     @Override
-    public UserDto save(UserDto userDto) {
-        return null;
+    public UserDto save(UserDto userDto)   {
+        User user = UserMappingHelper.map(userDto);
+        User dbuser = userRepository.save(user);
+        UserDto result = UserMappingHelper.map(dbuser);
+        return result;
     }
 
     @Override
     public UserDto findById(Integer userId) {
-        return null;
+        return userRepository.findById(userId)
+                .map(UserMappingHelper::map)
+                .orElseThrow(()-> new RuntimeException("User not found in Db"));
     }
 
     @Override
     public List<UserDto> findALl() {
-        return List.of();
+        return userRepository.findAll().stream()
+                .map(UserMappingHelper::map)
+                .sorted(Comparator.comparing(UserDto::getUserId))
+                .collect((Collectors.toList()));
     }
 
     @Override
@@ -32,7 +47,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public void daleteById(Integer userId) {
-
+        userRepository.deleteById(userId);
     }
 
     @Override

@@ -1,7 +1,7 @@
-package com.javaexpress.user_service.dto;
+package com.javaexpress.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.javaexpress.user_service.model.RoleBasedAuthority;
+import com.javaexpress.model.RoleBasedAuthority;
 import lombok.*;
 
 @NoArgsConstructor

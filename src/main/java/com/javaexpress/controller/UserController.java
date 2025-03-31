@@ -1,4 +1,4 @@
-package com.javaexpress.user_service.controller;
+package com.javaexpress.controller;
 
 public class UserController {
 }

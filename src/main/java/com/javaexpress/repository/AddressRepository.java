@@ -1,6 +1,6 @@
-package com.javaexpress.user_service.repository;
+package com.javaexpress.repository;
 
-import com.javaexpress.user_service.model.Address;
+import com.javaexpress.model.Address;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface AddressRepository  extends JpaRepository<Address, Integer> {

@@ -1,4 +1,4 @@
-package com.javaexpress.user_service.dto;
+package com.javaexpress.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
