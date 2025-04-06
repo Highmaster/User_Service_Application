@@ -19,6 +19,7 @@ public class UserController {
 
     @PostMapping
     public ResponseEntity<UserDto> save(@RequestBody UserDto userDto) {
+        log.info("UserController :: save");
         UserDto dbUser = userService.save(userDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(dbUser);
     }
