@@ -29,4 +29,12 @@ public class UserController {
         log.info("UserController :: fetch user details");
         return ResponseEntity.ok(userService.findById(userId));
     }
+
+    @PutMapping("/{userId}")
+    public ResponseEntity<UserDto> update(@PathVariable Integer userId,
+            @RequestBody UserDto userDto) {
+        log.info("UserController :: update");
+        return ResponseEntity.ok(userService.update(userId, userDto));
+    }
+
 }
