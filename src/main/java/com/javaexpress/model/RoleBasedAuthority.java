@@ -1,10 +1,10 @@
 package com.javaexpress.model;
 
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 
 @Getter
-@RequiredArgsConstructor
+
+
 
 public enum RoleBasedAuthority {
 
@@ -13,5 +13,8 @@ public enum RoleBasedAuthority {
 
     private final String role;
 
+    RoleBasedAuthority(String role) {
+        this.role = role;
+    }
 
 }
