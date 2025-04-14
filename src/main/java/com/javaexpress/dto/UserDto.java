@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
+import java.util.Set;
+
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -21,5 +23,8 @@ public class UserDto {
     @JsonProperty("credential")
     @JsonInclude(value= JsonInclude.Include.NON_NULL)
     private CredentialDto credentialDto;
+
+    private Set<AddressDto> addressDtos;
+
 
 }
