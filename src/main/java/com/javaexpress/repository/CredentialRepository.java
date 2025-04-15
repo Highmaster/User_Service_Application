@@ -7,6 +7,6 @@ import java.util.Optional;
 
 public interface CredentialRepository  extends JpaRepository<Credential, Integer>   {
 
-    @Override
+   // @Override
     Optional<Credential> findByUsername(String username);
 }
