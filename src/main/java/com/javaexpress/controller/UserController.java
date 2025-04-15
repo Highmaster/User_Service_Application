@@ -2,11 +2,14 @@ package com.javaexpress.controller;
 
 import com.javaexpress.dto.UserDto;
 import com.javaexpress.service.UserService;
+import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import static lombok.extern.java.Log.*;
 
 
 @RestController
